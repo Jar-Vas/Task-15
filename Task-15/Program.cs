@@ -24,7 +24,7 @@
             Отримати фірми з дня заснування, яких минуло 123 дні;
             Отримати фірми, у яких прізвище директора Black і назва фірми містить слово White.
             */
-            Console.WriteLine("TASK-1");
+            Console.WriteLine("TASK-1,2");
             List<Firm> Firms = new List<Firm>();
             Firms.Add(new Firm("Apple", new DateTime(1999, 2, 4), "IT", "John", "Ternus", "Er", 25000, "C:/Users"));
             Firms.Add(new Firm("NVidia", new DateTime(1999, 2, 3), "IT", "Jensen", "Huang", "Uoa", 24999, "D:/Users"));
@@ -66,7 +66,7 @@
             foreach (Firm f in Firms07) { Console.WriteLine(f); }
 
             Console.WriteLine(".8");
-            var Firms08 = Firms.Where(n => n.CEOSName == "White");
+            var Firms08 = Firms.Where(n => n.CeoName.SName == "White");
             foreach (Firm f in Firms08) { Console.WriteLine(f); }
 
             Console.WriteLine(".9");
@@ -79,8 +79,11 @@
             foreach (Firm f in Firms10) { Console.WriteLine(f); }
 
             Console.WriteLine(".11");
-            var Firms11 = Firms.Where(n => n.CEOSName == "Black" && n.Name.IndexOf("White") != -1);
+            var Firms11 = Firms.Where(n => n.CeoName.SName == "Black" && n.Name.IndexOf("White") != -1);
             foreach (Firm f in Firms11) { Console.WriteLine(f); }
+
+
+            Console.WriteLine("TASK-3");
         }
     }
 }
