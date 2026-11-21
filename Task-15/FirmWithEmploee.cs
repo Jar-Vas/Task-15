@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -28,6 +29,11 @@ namespace Task_15
             Email = "";
             Salary = 0;
         }
+
+        public override string ToString()
+        {
+            return "Name: " + EmploeeName + ", Position: " + Position + ", Phone number: " + PhoneNumber + ", Email: " + Email + ", Salary: " + Salary;
+        }
     }
 
 
@@ -55,6 +61,16 @@ namespace Task_15
         public FirmWithEmploee() : base()
         {
             Emploees = new List<Emploee>();
+        }
+        public override string ToString()
+        {
+            string s = "Firm:\n" + base.ToString() + "\n";
+            s += "Emploees: " + "\n";
+            for (int i = 0; i < Emploees.Count; i++)
+            {
+                s += $"#{i}: " + Emploees[i] + "\n";
+            }
+            return s;
         }
     }
 }

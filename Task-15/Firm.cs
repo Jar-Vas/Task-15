@@ -31,6 +31,9 @@ namespace Task_15
             Name = other.Name;
             FoundingDate = other.FoundingDate;
             BusinessProfile = other.BusinessProfile;
+            CeoName = other.CeoName;
+            NumberOfEmploees = other.NumberOfEmploees;
+            Adress = other.Adress;
         }
         public Firm()
         {
